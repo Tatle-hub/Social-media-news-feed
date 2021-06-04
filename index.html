@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Introduction to React.js</title>
+
+    <!-- React CDN -->
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+
+
+
+    <!-- React DOM -->
+
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+
+
+    <!-- Babel Library -->
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+
+    <!-- Links -->
+    <link rel="stylesheet" href="index.css"/>
+
+
+</head>
+
+<body>
+    <!-- 1. REACT CONTENT LOCATION -->
+<div id="app">React has not rendered yet.</div>
+<script type="text/babel">
+
+class Profile extends React.Component {
+    render() {
+        return (
+            <div class="container"><em>.NARVAEZ</em><center>
+            <img class="photo" src="https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.6435-9/180852214_3032838150277581_1213417850384818047_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeGHKrpAjkKnAwZllWi2_1g4Ekymc9d-ZK4STKZz135krlUW681UxRiaqWb4sAyqCARUBT-928EODwXQ0REo7JDj&_nc_ohc=Gnavvm8N0UsAX8_2a53&_nc_ht=scontent.fcrk1-3.fna&oh=5f8b62a31e5b43cce27d166d40d213e4&oe=60CE86F4" />
+            <h1>Narvaez Rassel Tiru</h1>
+            <p>Web Designer</p>
+            <button type="button" class="button" >&#9760; &nbsp; &nbsp;Check my work</button></center>
+             <div class="vertical-menu">
+            <a href="#" class="active">MENU</a>
+            <a href="#">Newsfeed</a>
+            <a href="#">Locations</a>
+            <a href="#">Messages</a>
+            <a href="#">Notifications</a>
+            <a href="#">Privacy</a>
+            <a href="#">Settings</a>
+            </div>
+            <div class="vertical-menu">
+            <a href="#">BOOKMARKS</a>
+            <a href="#">Singapore</a>
+            <a href="#">Canada</a>
+            <a href="#">Philippines</a>
+            <a href="#">United States</a>
+            <a href="#">Japan</a>
+            </div>
+            <footer>
+            <p>Copyright © 2021.Narvaez Rassel | Student.</p>
+            </footer>
+            </div>
+        );
+    }
+}
+
+function Card(props) {
+    return (
+        <div class="Post">
+            <img class="img" src={props.profile} />
+            <img class="post_img" src={props.image} />
+            <h1 class="name">{props.name}</h1>
+        <div class="Pbutton">
+            <button type="button" class="post_button">&#9825;</button>
+            <button type="button" class="post_button">&#10150;</button>
+        </div>
+        </div>
+    );
+}
+
+ReactDOM.render (
+    <div>
+    <input type="text" placeholder="&#9998; Search.." name="search"/>
+        <Card   
+                profile="https://i.insider.com/608856910da8f40018033c5f?width=1136&format=jpeg"
+                name="Mark Zuckerberg"
+                image="https://i.pinimg.com/564x/11/62/62/11626237df4f3015a407b29105f50a72.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/73/4a/b7/734ab70509cbc26f70873a04a1531ad7.jpg"
+                name="Bill Gates"
+                image="https://i.pinimg.com/564x/e0/e1/79/e0e179066d873027eb36932107c5ef65.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/cd/5e/26/cd5e26d15333251f330dff06471dfcd9.jpg"
+                name="PhilHealth"
+                image="https://i.pinimg.com/564x/86/81/f4/8681f41556f84bb7fe43bdd7d963f681.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/3b/1e/66/3b1e66873b65a94493227f4978aa2daf.jpg"
+                name="Manny (PACMAN) Pacquiao"
+                image="https://i.pinimg.com/564x/39/ba/f0/39baf0f8c0804dbf7ecd3ff8a053da15.jpg" />
+         <Card
+                profile="https://i.pinimg.com/564x/ac/9f/d5/ac9fd5f05cc690e137e659b32d527280.jpg"
+                name="Bea Alonzo"
+                image="https://i.pinimg.com/564x/af/f5/60/aff5607e0dcb9b40ff37972a12c7e139.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/3d/fc/ea/3dfceaacd68c355341f28793d4368679.jpg"
+                name="Kathryn Bernardo"
+                image="https://i.pinimg.com/564x/80/ce/94/80ce945867ada3943e886af76a4af36e.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/93/91/db/9391db7778834aa571e76f7eea1e3daa.jpg"
+                name="Daniel Padillaa"
+                image="https://i.pinimg.com/564x/a6/96/a4/a696a4cba415c3546d6d01c1f747b696.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/52/a7/43/52a743555e19056f532b3937b3c27a78.jpg"
+                name="Rodigo Duterte"
+                image="https://i.pinimg.com/564x/1e/b5/5c/1eb55c2ba47bfed946d96d5b1b2733d0.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/d8/4b/e0/d84be029e922267bcfa0b44b1a9dae5c.jpg"
+                name="Monkey D Lufy"
+                image="https://i.pinimg.com/564x/28/35/c1/2835c1a9ac578125756efe7136fae90a.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/e2/a5/41/e2a541b3f6d4f88685737acfc96c0daf.jpg"
+                name="Nobara Kugusaki"
+                image="https://i.pinimg.com/564x/65/8a/35/658a35f2072083ab278c3e8355022f59.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/4c/59/7b/4c597be91257d8dd7664915dd3ef47f0.jpg"
+                name="Roronoa Zoro"
+                image="https://i.pinimg.com/564x/34/8a/ae/348aae50f9e632650d58cb2c5499acf0.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/27/05/e4/2705e4fffbf866157c151c7c5b2b575c.jpg"
+                name="Sue Ramirez"
+                image="https://i.pinimg.com/564x/48/34/d1/4834d1f284eb9f53d2f187b88691a247.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/09/ad/71/09ad71805638f53e09dd7fa5167b366f.jpg"
+                name="Angel Locsin"
+                image="https://i.pinimg.com/564x/53/de/95/53de95897f7a173094285d5aa236845f.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/96/40/0a/96400a1d157d2d0649eb252a384bdeb4.jpg"
+                name="Pia Wurtzbuch"
+                image="https://i.pinimg.com/564x/0b/7a/66/0b7a66a2655625dcc36260c0174e19d7.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/eb/45/24/eb4524cc7a5def346011cf6279e55f38.jpg"
+                name="Marian Rivera"
+                image="https://i.pinimg.com/564x/06/88/d3/0688d371be80bc5919fed8db68e67cde.jpg" />
+        <Card
+                profile="https://i.pinimg.com/564x/fe/f3/22/fef322510d7c5ca96e6ec7b404613141.jpg"
+                name="Jujutsu Kaisen"
+                image="https://i.pinimg.com/originals/0c/59/06/0c59065382d06c47fddc27a9759606c1.gif" />
+        <Profile />
+    </div>,
+    document.getElementById('app')
+)
+
+</script>
+
+</body>
+</html>
